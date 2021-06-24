@@ -1,0 +1,11 @@
+#Run the software on a Linux system
+$ wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+$ bash Miniconda2-latest-Linux-x86_64.sh
+$ conda config --add channels defaults
+$ conda config --add channels conda-forge
+$ conda config --add channels bioconda
+$ conda config --add channels ursky
+# Metawrap install successfully
+$ conda install -y -c ursky MetaWrap-mg
+$ conda install -y blas=2.5=mkl
+$ MetaWrap assembly -1 data_1.fasta -2 data_2.fasta -o output _dir
