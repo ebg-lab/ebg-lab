@@ -1,0 +1,5 @@
+Download ncbi-blast-2.9.0+-x64-win64.tar.gz from https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/  #It's depends on your computer version 
+C:\Users\**>cd C:\blast
+C:\Blast>blastn -version #blastn: 2.9.0+Package: blast 2.9.0, build Mar 11 2019 15:18:27
+C:\Blast\db> makeblastdb -in CopA_reviewed.fasta -dbtype prot -title " CopA_reviewed" -out NR
+C:\blast\db>blastx.exe -db NR -query dirn.fasta -out dirn.out -evalue 0.000001 -max_target_seqs 5 -num_threads 4 -outfmt 6
